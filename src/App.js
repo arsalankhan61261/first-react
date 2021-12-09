@@ -1,23 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
+let obj = [
+  {
+    name: 'Arsalan',
+    email: 'abc@yahoo.com',
+    contact: '0343-xx87560'
+  },
+  {
+    name: 'Osama',
+    email: 'xyz@gmail.com',
+    contact: '0900-7x22541'
+  },
+  {
+    name: 'Anonymus',
+    email: 'efg@yahoo.com',
+    contact: '1245-1247548'
+  }
+];
+
+let name = 'Arsalan Khan'
+
+const App = () => { 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>{name}</h1>
     </div>
   );
 }

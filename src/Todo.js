@@ -16,6 +16,11 @@ const Todo = () => {
         setTask('')
     }
 
+    const deleteTodo = (index) => {
+        arr?.splice(index, 1)
+        setArr([...arr])
+    }
+
     return (
         <div>
             <h1>Todo App</h1>
@@ -26,7 +31,10 @@ const Todo = () => {
             </div>
             <ol>
                 {arr?.map((v, i) => {
-                    return <li key={i}>{v}</li>
+                    return <li key={i}><span>{v}</span>
+                    &nbsp;&nbsp;
+                    <button onClick={() => deleteTodo(i)}>Delete</button>
+                    </li>
                 })}
             </ol>
         </div>

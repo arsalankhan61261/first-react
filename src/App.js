@@ -8,10 +8,13 @@ const App = () => {
   const [obj, setObj] = useState({})
 
   const addKeyValue = () => {
-    obj[key] = value
-    setObj(obj)
-    console.log(Object.entries(obj));
-
+    if (obj[key] = value) {
+      setObj(obj)
+      // console.log(Object.entries(obj));
+    } else {
+      alert('please fill inputs');
+      setObj({})
+    }
     setKey('')
     setValue('')
   }

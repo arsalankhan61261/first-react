@@ -1,7 +1,7 @@
 import './App.css'
-import Count from './Count';
-import Todo from './Todo';
 import { useState } from 'react';
+// import {Todo, Count} from './Components'
+import * as Components from './Components'
 
 const App = () => {
   const [key, setKey] = useState('')
@@ -21,7 +21,8 @@ const App = () => {
   }
 
   return (
-    <Todo/>
+    <Components.Todo />
+    // <Todo/>
     // <div>
     //   {/* <Count /> */}
     //   <div>

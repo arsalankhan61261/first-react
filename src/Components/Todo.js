@@ -37,7 +37,6 @@ const Todo = () => {
 
     const updateTodo = () => {
         arr[updateIndex] = task
-        setEdit(false)
         setArr([...arr])
         setIndex(null)
         cancelUpdate()

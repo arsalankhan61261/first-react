@@ -21,7 +21,7 @@ const App = () => {
   }
 
   return (
-    <Components.Todo />
+    <Components.Count />
     // <Todo/>
     // <div>
     //   {/* <Count /> */}

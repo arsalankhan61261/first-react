@@ -3,17 +3,37 @@ import { useState } from "react";
 const Count = () => {
     const [name, setName] = useState('')
     const [wordCount, setWordsCount] = useState(0)
+    const [obj, setObj] = useState({})
 
     function updateName (e) {
-        setName(e?.target?.value)
-        setWordsCount(e?.target?.value?.trim()?.split(' ')?.length)
+        let value = e?.target?.value
+        setName(value)
+        setWordsCount(value?.trim()?.split(' ')?.length)
+
+        let wordsArray = value?.trim()?.split(' ')
+
+        for (var val of wordsArray) {
+            val = val?.toLowerCase()
+            if (!obj[val]) {
+                obj[val] = 1
+            } else {
+                obj[val]++
+            }   
+        }
+        setObj({...obj})
     }
     return (
         <div>
             <h1>{name}</h1>
             <input placeholder = 'Enter your name here' onChange={updateName}/>
             <p>Characters Count: {name?.trim()?.length}</p>
-            <p>Words Count: {wordCount}</p>  
+            <p>Words Count: {wordCount}</p>
+
+            <div>
+                {Object.entries(obj)?.map((v, i) => {
+                    return <p key={i}>{`${v[0]?.charAt(0)?.toUpperCase()}${v[0]?.slice(1,)}: ${v[1]}`}</p>
+                })}
+            </div>
         </div>
     )
 

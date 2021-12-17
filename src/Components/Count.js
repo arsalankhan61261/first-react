@@ -8,7 +8,9 @@ const Count = () => {
     function updateName (e) {
         let value = e?.target?.value
         setName(value)
+        // console.log(value);
         setWordsCount(value?.trim()?.split(' ')?.length)
+        // console.log(value?.trim()?.split(' '));
 
         let wordsArray = value?.trim()?.split(' ')
 
@@ -16,6 +18,7 @@ const Count = () => {
             val = val?.toLowerCase()
             if (!obj[val]) {
                 obj[val] = 1
+                // console.log(obj)
             } else {
                 obj[val]++
             }   
@@ -25,12 +28,13 @@ const Count = () => {
     return (
         <div>
             <h1>{name}</h1>
-            <input placeholder = 'Enter your name here' onChange={updateName}/>
+            <input placeholder = 'Enter your name here...' onChange={updateName}/>
             <p>Characters Count: {name?.trim()?.length}</p>
             <p>Words Count: {wordCount}</p>
 
             <div>
                 {Object.entries(obj)?.map((v, i) => {
+                    // console.log(Object.entries(obj))
                     return <p key={i}>{`${v[0]?.charAt(0)?.toUpperCase()}${v[0]?.slice(1,)}: ${v[1]}`}</p>
                 })}
             </div>

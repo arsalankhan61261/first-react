@@ -10,7 +10,7 @@ const PropsDemo = (props) => {
         axios.get(`https://jsonplaceholder.typicode.com/photos`)
         .then((res) => {
             // console.log(res.data);
-            setApiArr(res?.data)
+            setApiArr(res?.data?.slice(0, 100))
         }, 5000)
     }, [])
 
@@ -24,6 +24,7 @@ const PropsDemo = (props) => {
                     return (
                         <div key={i}>
                             <p>{v?.title}</p>
+                            <img src={v?.url} alt={v?.title} />
                         </div>
                     )
                 })}

@@ -1,12 +1,13 @@
 import './App.css'
 import { useState } from 'react';
-// import {Todo, Count} from './Components'
-import * as Components from './Components'
+import {PropsDemo} from './Components'
+// import * as Components from './Components'
 
 const App = () => {
   const [key, setKey] = useState('')
   const [value, setValue] = useState('')
   const [obj, setObj] = useState({})
+  const [message, setMessage] = useState('Hello i send message to you.')
 
   const addKeyValue = () => {
     if (obj[key] = value) {
@@ -21,7 +22,7 @@ const App = () => {
   }
 
   return (
-    <Components.Count />
+    <PropsDemo message={message} />
     // <Todo/>
     // <div>
     //   {/* <Count /> */}

@@ -5,7 +5,7 @@ import axios from 'axios'
 const PropsDemo = (props) => {
     console.log(props?.message);
     const [apiArr, setApiArr] = useState([])
-    const [apiCallsCount, setApiCallsCount] = useState(1)
+    const [apiCallsCount, setApiCallsCount] = useState(0)
     const [currentIndex, setCurrentIndex] = useState(0)
 
     useEffect(() => {

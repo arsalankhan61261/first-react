@@ -12,13 +12,15 @@ const PropsDemo = (props) => {
         setTimeout(() => {
             getData()
         }, 3000)
-    }, [])
+    }, [apiCallsCount])
 
     const getData = () => {
         axios.get(`https://jsonplaceholder.typicode.com/photos`)
             .then((res) => {
             // console.log(res.data);
-            setApiArr(res?.data?.slice(0, 10))
+            setApiArr(res?.data?.slice(currentIndex, currentIndex + 10))
+            setCurrentIndex(currentIndex + 10)
+            setApiCallsCount(apiCallsCount + 1)
         })
     }
 

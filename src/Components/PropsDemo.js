@@ -5,29 +5,35 @@ import axios from 'axios'
 const PropsDemo = (props) => {
     console.log(props?.message);
     const [apiArr, setApiArr] = useState([])
+    const [apiCallsCount, setApiCallsCount] = useState(1)
+    const [currentIndex, setCurrentIndex] = useState(0)
 
     useEffect(() => {
         setTimeout(() => {
-            axios.get(`https://jsonplaceholder.typicode.com/photos`)
+            getData()
+        }, 3000)
+    }, [])
+
+    const getData = () => {
+        axios.get(`https://jsonplaceholder.typicode.com/photos`)
             .then((res) => {
             // console.log(res.data);
             setApiArr(res?.data?.slice(0, 10))
-            })
-        }, 2000)
-    }, [])
+        })
+    }
 
     return (
         <div>
             <h1>Prop Message</h1>
             <p>{props?.message}</p>
-            <p>Api Calls: {props?.apiCallsCount}</p>
+            <p>Api Calls: {apiCallsCount}</p>
             <div>
                 {!apiArr?.length ? <p>Loading Data...</p> :
                 apiArr.map((v, i) => {
                     return (
                         <div key={i}>
                             <p>{v?.title}</p>
-                            <img src={v?.url} alt={v?.title} />
+                            <img src={v?.thumbnailUrl} alt={v?.title} />
                         </div>
                     )
                 })}

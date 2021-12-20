@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 
 const PropsDemo = (props) => {
-    // console.log(props?.message);
+    console.log(props?.message);
     const [apiArr, setApiArr] = useState([])
 
     useEffect(() => {
@@ -12,14 +12,15 @@ const PropsDemo = (props) => {
             .then((res) => {
             // console.log(res.data);
             setApiArr(res?.data?.slice(0, 10))
-            }, 5000)
-        }, 5000)
+            })
+        }, 2000)
     }, [])
 
     return (
         <div>
             <h1>Prop Message</h1>
             <p>{props?.message}</p>
+            <p>Api Calls: {props?.apiCallsCount}</p>
             <div>
                 {!apiArr?.length ? <p>Loading Data...</p> :
                 apiArr.map((v, i) => {

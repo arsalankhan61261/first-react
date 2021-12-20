@@ -8,13 +8,6 @@ const App = () => {
   const [value, setValue] = useState('')
   const [obj, setObj] = useState({})
   const [message, setMessage] = useState('Hello i send message to you.')
-  const [apiCallsCount, setApiCallsCount] = useState(1)
-
-  useEffect(() => {
-    setTimeout(() => {
-      setMessage('Message updated Success!')
-    }, 5000)
-  }, [])
 
   const addKeyValue = () => {
     if (obj[key] = value) {
@@ -30,7 +23,7 @@ const App = () => {
 
   return (
     // <Components.Count />
-    <PropsDemo message={message} apiCallsCount={apiCallsCount} />
+    <PropsDemo message={message} />
     // <Todo/>
     // <div>
     //   {/* <Count /> */}

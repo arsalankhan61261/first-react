@@ -7,16 +7,18 @@ const PropsDemo = (props) => {
     const [apiArr, setApiArr] = useState([])
 
     useEffect(() => {
-        axios.get(`https://jsonplaceholder.typicode.com/photos`)
-        .then((res) => {
+        setTimeout(() => {
+            axios.get(`https://jsonplaceholder.typicode.com/photos`)
+            .then((res) => {
             // console.log(res.data);
-            setApiArr(res?.data?.slice(0, 100))
+            setApiArr(res?.data?.slice(0, 10))
+            }, 5000)
         }, 5000)
     }, [])
 
     return (
         <div>
-            <h1>Props Message</h1>
+            <h1>Prop Message</h1>
             <p>{props?.message}</p>
             <div>
                 {!apiArr?.length ? <p>Loading Data...</p> :

@@ -21,7 +21,7 @@ const PropsDemo = (props) => {
             setApiArr(allArray?.slice(currentIndex, currentIndex + 10))
             setCurrentIndex(currentIndex + 50)
             setApiCallsCount(apiCallsCount + 1)
-            }, 300)
+            }, 1000)
         } else {
             console.log('else...');
         }

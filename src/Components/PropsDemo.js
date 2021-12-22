@@ -12,7 +12,7 @@ const PropsDemo = (props) => {
     useEffect(() => {
         setTimeout(() => {
             getData()
-        }, 3000)
+        }, 2000)
     }, [])
 
     useEffect(() => {

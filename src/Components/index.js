@@ -7,5 +7,5 @@ export {
     Count,
     Todo,
     Form,
-    PropsDemo
+    PropsDemo,
 }

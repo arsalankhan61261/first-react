@@ -1,6 +1,7 @@
 import './App.css'
-import { useState, useEffect } from 'react';
-import {PropsDemo} from './Components'
+import { useState, useEffect, Components } from 'react';
+import {Form} from './Components/Form/Form'
+// import {PropsDemo} from './Components'
 // import * as Components from './Components'
 
 const App = () => {
@@ -22,8 +23,9 @@ const App = () => {
   }
 
   return (
+    <Components.Form.Form />
     // <Components.Count />
-    <PropsDemo message={message} />
+    // <PropsDemo message={message} />
     // <Todo/>
     // <div>
     //   {/* <Count /> */}

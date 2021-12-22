@@ -1,34 +1,34 @@
 import './App.css'
-import { useState, useEffect, Components } from 'react';
-import {Form} from './Components/Form/Form'
+import { useState, useEffect, Component } from 'react';
+// import {Form} from './Components/form/Form'
+import { Todo } from './Components/Todo'
 // import {PropsDemo} from './Components'
 // import * as Components from './Components'
 
 const App = () => {
-  const [key, setKey] = useState('')
-  const [value, setValue] = useState('')
-  const [obj, setObj] = useState({})
-  const [message, setMessage] = useState('Hello i send message to you.')
+  // const [key, setKey] = useState('')
+  // const [value, setValue] = useState('')
+  // const [obj, setObj] = useState({})
+  // const [message, setMessage] = useState('Hello i send message to you.')
 
-  const addKeyValue = () => {
-    if (obj[key] = value) {
-      setObj(obj)
-      // console.log(Object.entries(obj));
-    } else {
-      alert('please fill inputs');
-      setObj({})
-    }
-    setKey('')
-    setValue('')
-  }
+  // const addKeyValue = () => {
+  //   if (obj[key] = value) {
+  //     setObj(obj)
+  //     // console.log(Object.entries(obj));
+  //   } else {
+  //     alert('please fill inputs');
+  //     setObj({})
+  //   }
+  //   setKey('')
+  //   setValue('')
+  // }
 
   return (
-    <Components.Form.Form />
-    // <Components.Count />
+    // <Count />
     // <PropsDemo message={message} />
-    // <Todo/>
+    <Components.Todo />
     // <div>
-    //   {/* <Count /> */}
+      // {/* <Count /> */}
     //   <div>
     //     <input name='key' value={key} onChange={e => setKey(e?.target?.value?.replace(' ', '_'))} placeholder='Enter key here..' />
     //     <input name='value' value={value} onChange={e => setValue(e?.target?.value)} placeholder='Enter value here..' />

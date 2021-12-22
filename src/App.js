@@ -22,23 +22,26 @@ const App = () => {
   // }
 
   return (
+    <div>
+      <h1>Axiom Students</h1>
+      <Components.Form />
+    </div>
     // <Count />
     // <PropsDemo message={message} />
-    <Components.Form />
     // <div>
-      // {/* <Count /> */}
-    //   <div>
-    //     <input name='key' value={key} onChange={e => setKey(e?.target?.value?.replace(' ', '_'))} placeholder='Enter key here..' />
-    //     <input name='value' value={value} onChange={e => setValue(e?.target?.value)} placeholder='Enter value here..' />
-    //     <button onClick={addKeyValue}>Add</button>
+    // <Count />
+    // <div>
+    //   <input name='key' value={key} onChange={e => setKey(e?.target?.value?.replace(' ', '_'))} placeholder='Enter key here..' />
+    //   <input name='value' value={value} onChange={e => setValue(e?.target?.value)} placeholder='Enter value here..' />
+    //   <button onClick={addKeyValue}>Add</button>
     //   </div>
     //   <div>
     //     {Object.entries(obj)?.map((v, i) => {
     //       return <p key={i}>{`${v[0]?.charAt(0)?.toUpperCase()}${v[0]?.slice(1,)}: ${v[1]}`}</p>
     //     })}
-    //   </div>
+    //     </div>
     // </div>
   )
-};
+}
 
 export default App;

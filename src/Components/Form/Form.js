@@ -1,5 +1,4 @@
-import React from 'react'
-import {  useState, useEffect } from 'react'
+import { useState } from 'react'
 
 const Form = () => {
 
@@ -24,4 +23,4 @@ const Form = () => {
     )
 }
 
-export default Form
+export default Form;

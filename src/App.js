@@ -1,9 +1,7 @@
 import './App.css'
-import { useState, useEffect, Component } from 'react';
-// import {Form} from './Components/form/Form'
-import { Todo } from './Components/Todo'
+import { useState, useEffect } from 'react';
 // import {PropsDemo} from './Components'
-// import * as Components from './Components'
+import * as Components from './Components'
 
 const App = () => {
   // const [key, setKey] = useState('')
@@ -26,7 +24,7 @@ const App = () => {
   return (
     // <Count />
     // <PropsDemo message={message} />
-    <Components.Todo />
+    <Components.Form />
     // <div>
       // {/* <Count /> */}
     //   <div>

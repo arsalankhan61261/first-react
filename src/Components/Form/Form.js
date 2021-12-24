@@ -26,7 +26,6 @@ const Form = () => {
                 <label htmlFor="age">Age</label>
                 <input type="text" name="age" id="age" value={state.age} onChange={onchange} placeholder="Enter age here" />
             </div>
-            {/* <button type="submit">Add</button> */}
             <input type="submit" value="Add" />
         </form>
     )

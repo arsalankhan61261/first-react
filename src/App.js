@@ -9,6 +9,7 @@ const App = () => {
   // const [value, setValue] = useState('')
   // const [obj, setObj] = useState({})
   // const [message, setMessage] = useState('Hello i send message to you.')
+  const [students, setStudents] = useState([])
 
   // const addKeyValue = () => {
   //   if (obj[key] = value) {
@@ -26,7 +27,7 @@ const App = () => {
     <div>
       <h1>Axiom Students</h1>
       <Components.Form />
-      <Components.Students students={[{username: 'Arsalan', age: 24}]} />
+      <Components.Students students={students} />
       {/* <PropsDemo message={message} /> */}
     </div>
     // <Count />

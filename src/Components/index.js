@@ -10,6 +10,6 @@ export {
     Todo,
     Form,
     Students,
-    PropsDemo,
     StudentItem,
+    PropsDemo,
 }

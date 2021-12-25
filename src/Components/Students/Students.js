@@ -5,6 +5,11 @@ const Students = ({students}) => {
     return (
         <div>
             <h2>Students</h2>
+            {
+                students.length === 0 && (
+                    <p>No Students found</p>
+                )
+            }
             <ul>
                 {
                     students.map((student, index) => <StudentItem key={index} index={index} student={student} />)

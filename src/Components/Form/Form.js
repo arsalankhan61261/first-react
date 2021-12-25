@@ -11,8 +11,17 @@ const Form = () => {
     }
 
     const submit = (e) => {
-        e?.preventdefault()
-        console.log('Submitted');
+        e?.preventDefault()
+        const {username, age} = state
+        if (username === '' || age === '') {
+            alert('Please fill inputs')
+        } else {
+            console.log(state);
+            setState({
+                username: '',
+                age: '',
+            })
+        }
     }
 
     return (

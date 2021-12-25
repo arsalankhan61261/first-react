@@ -2,12 +2,13 @@ import './App.css'
 import { useState, useEffect } from 'react';
 // import {PropsDemo} from './Components'
 import * as Components from './Components'
+// import Students from './Components/students/Students';
 
 const App = () => {
   // const [key, setKey] = useState('')
   // const [value, setValue] = useState('')
   // const [obj, setObj] = useState({})
-  const [message, setMessage] = useState('Hello i send message to you.')
+  // const [message, setMessage] = useState('Hello i send message to you.')
 
   // const addKeyValue = () => {
   //   if (obj[key] = value) {
@@ -25,6 +26,7 @@ const App = () => {
     <div>
       <h1>Axiom Students</h1>
       <Components.Form />
+      <Components.Students students={[{username: 'Arsalan', age: 24}]} />
       {/* <PropsDemo message={message} /> */}
     </div>
     // <Count />

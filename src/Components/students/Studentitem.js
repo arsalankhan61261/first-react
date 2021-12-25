@@ -1,9 +1,13 @@
 import { useState } from 'react';
 
-const Studentitem = (props) => {
+const StudentItem = ({ index, student }) => {
+    const { username, age} = student;
     return (
-
+        <li>
+            <h4>{index + 1}. {username}</h4>
+            <p>His age is {age}</p>
+        </li>
     )
 }
 
-export default Studentitem;
+export default StudentItem;

@@ -11,6 +11,8 @@ const App = () => {
   // const [message, setMessage] = useState('Hello i send message to you.')
   const [students, setStudents] = useState([])
 
+  const addStudent = (newStudent)  => setStudents([...students, newStudent])
+
   // const addKeyValue = () => {
   //   if (obj[key] = value) {
   //     setObj(obj)
@@ -26,7 +28,7 @@ const App = () => {
   return (
     <div>
       <h1>Axiom Students</h1>
-      <Components.Form />
+      <Components.Form addStudent={addStudent} />
       <Components.Students students={students} />
       {/* <PropsDemo message={message} /> */}
     </div>

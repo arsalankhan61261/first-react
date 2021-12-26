@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { StudentItem } from '..';
 
 const Students = ({students}) => {
+    console.log(students);
     return (
         <div>
             <h2>Students</h2>

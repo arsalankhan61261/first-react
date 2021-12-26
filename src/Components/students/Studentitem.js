@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
-const StudentItem = ({ index, student }) => {
-    const { username, age} = student;
+const StudentItem = ({ student, index }) => {
+    const { username, age } = student;
     return (
         <li>
             <h4>{index + 1}. {username}</h4>

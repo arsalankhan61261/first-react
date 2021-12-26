@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-const Form = () => {
+const Form = ({addStudent}) => {
     const [state, setState] = useState({
         username: '',
         age: '',
@@ -16,7 +16,8 @@ const Form = () => {
         if (username === '' || age === '') {
             alert('Please fill inputs')
         } else {
-            console.log(state);
+            addStudent(state)
+            // console.log(state);
             setState({
                 username: '',
                 age: '',
@@ -37,7 +38,8 @@ const Form = () => {
                 &nbsp;
                 <input type="text" name="age" id="age" value={state.age} onChange={onchange} placeholder="Enter age here" />
             </div>
-            <input type="submit" value="Add" />
+            <button onClick={submit}>Add</button>
+            {/* <input type="submit" value="Add" /> */}
         </form>
     )
 }

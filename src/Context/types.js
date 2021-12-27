@@ -1,0 +1,1 @@
+export const ADD_STUDNET = 'ADD_STUDENT';

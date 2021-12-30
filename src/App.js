@@ -2,6 +2,7 @@ import './App.css'
 import { useState, useEffect } from 'react';
 // import {PropsDemo} from './Components'
 import * as Components from './Components'
+import GlobalState from './Context/Global/globalState';
 // import Students from './Components/students/Students';
 
 const App = () => {
@@ -9,7 +10,12 @@ const App = () => {
   // const [value, setValue] = useState('')
   // const [obj, setObj] = useState({})
   // const [message, setMessage] = useState('Hello i send message to you.')
-  const [students, setStudents] = useState([])
+  const [students, setStudents] = useState([
+    {
+      username: 'Anonymus',
+      age: 100
+    }
+  ])
 
   const addStudent = (newStudent)  => setStudents([...students, newStudent])
 
@@ -26,12 +32,14 @@ const App = () => {
   // }
 
   return (
-    <div>
+    <GlobalState>
+      <div>
       <h1>Axiom Students</h1>
       <Components.Form addStudent={addStudent} />
       <Components.Students students={students} />
-      {/* <PropsDemo message={message} /> */}
-    </div>
+      </div>
+    </GlobalState>
+    // <PropsDemo message={message} />
     // <Count />
     // <div>
     // <Count />

@@ -4,7 +4,8 @@ const globalReducer = (state, action) => {
     switch (action.type) {
         case ADD_STUDNET:
             return {
-                ...state
+                ...state,
+                students: [...state.students, action.payload] 
             }
     
         default:
@@ -13,3 +14,5 @@ const globalReducer = (state, action) => {
             };
     }
 }
+
+export default globalReducer;

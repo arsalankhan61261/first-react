@@ -3,9 +3,9 @@ import globalContext from './globalContext';
 import globalReducer from './globalReducer';
 import { ADD_STUDNET } from '../types';
 
-const globalState = (props) => {
+const GlobalState = (props) => {
     const initialState = {
-        students = []
+        students: []
     }
 
     const [state, dispatch] = useReducer(globalReducer, initialState)
@@ -27,4 +27,4 @@ const globalState = (props) => {
     </globalContext.Provider>
 }
 
-export default globalState;
+export default GlobalState;

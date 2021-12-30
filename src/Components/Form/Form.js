@@ -1,6 +1,9 @@
-import { useState } from 'react'
+import { useState, useContext } from 'react'
+import globalContext from '../../Context/Global/globalContext'
 
-const Form = ({addStudent}) => {
+const Form = () => {
+    const { addStudent } = useContext(globalContext)
+
     const [state, setState] = useState({
         username: '',
         age: '',

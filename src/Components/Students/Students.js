@@ -1,7 +1,9 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import globalContext from '../../Context/Global/globalContext';
 import { StudentItem } from '..';
 
-const Students = ({students}) => {
+const Students = () => {
+    const { students } = useContext(globalContext)
     // console.log(students);
     return (
         <div>

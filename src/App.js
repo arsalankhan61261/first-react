@@ -2,7 +2,7 @@ import './App.css'
 import { useState, useEffect } from 'react';
 // import {PropsDemo} from './Components'
 import * as Components from './Components'
-import GlobalState from './Context/Global/GlobalState';
+// import GlobalState from './Context/Global/GlobalState';
 // import Students from './Components/students/Students';
 
 const App = () => {
@@ -27,13 +27,11 @@ const App = () => {
   // }
 
   return (
-    <GlobalState>
-      <div>
+    <div>
       <h1>Axiom Students</h1>
-      <Components.Form />
-      <Components.Students />
+      <Components.Form addStudent={addStudent} />
+      <Components.Students students={students} />
       </div>
-    </GlobalState>
     // <PropsDemo message={message} />
     // <Count />
     // <div>

@@ -1,1 +1,1 @@
-export const ADD_STUDNET = 'ADD_STUDENT';
+export const ADD_STUDENT = 'ADD_STUDENT';

@@ -28,23 +28,23 @@ const App = () => {
   // }
 
   return (
-    <div>
-      <h2>Context API with axios</h2>
-      <Components.Posts />
-      <Components.PostItem />
-    </div>
+    // <div>
+    //   <h2>Context API with axios</h2>
+    //   <Components.Posts />
+    //   <Components.PostItem />
+    // </div>
     // <div>
     //   <h1>Axiom Students</h1>
     //   <Components.Form addStudent={addStudent} />
     //   <Components.Students students={students} />
     // </div>
-    // <GlobalState>
-    //   <div>
-    //     <h1>Axiom Students</h1>
-    //     <Components.Form addStudent={addStudent} />
-    //     <Components.Students students={students} />
-    //   </div>
-    // </GlobalState>
+    <GlobalState>
+      <div>
+        <h1>Axiom Students</h1>
+        <Components.Form addStudent={addStudent} />
+        <Components.Students students={students} />
+      </div>
+    </GlobalState>
     // <PropsDemo message={message} />
     // <Count />
     // <div>

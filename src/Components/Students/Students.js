@@ -1,6 +1,6 @@
 import { useContext, useState } from 'react';
 // import globalContext from '../../Context/Global/globalContext';
-import { StudentItem } from '..';
+import StudentItem from './StudentItem'
 
 const Students = ({students}) => {
     // const { students } = useContext(globalContext)

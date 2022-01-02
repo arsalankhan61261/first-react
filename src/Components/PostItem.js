@@ -8,4 +8,4 @@ const PostItem = () => {
     )
 }
 
-export default PostItem;
+export default PostItem

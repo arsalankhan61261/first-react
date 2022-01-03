@@ -2,7 +2,16 @@ import React from 'react'
 import PostItem from './PostItem'
 
 export const Posts = () => {
-    const posts = []
+    const posts = [
+        {
+            title: 'Arsalan',
+            body: 'Arsalan is a good boy'
+        },
+        {
+            title: 'Salman',
+            body: 'I think Salman is also a good boy'
+        },
+    ];
 
     return (
         <div>

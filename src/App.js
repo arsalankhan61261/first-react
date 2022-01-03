@@ -2,7 +2,7 @@ import './App.css'
 import { useState, useEffect } from 'react';
 // import {PropsDemo} from './Components'
 import * as Components from './Components'
-import GlobalState from './Context/Global/GlobalState';
+// import GlobalState from './Context/Global/GlobalState';
 // import GlobalState from './Context/Global/GlobalState';
 // import Students from './Components/students/Students';
 
@@ -28,23 +28,23 @@ const App = () => {
   // }
 
   return (
-    // <div>
-    //   <h2>Context API with axios</h2>
-    //   <Components.Posts />
-    //   <Components.PostItem />
-    // </div>
+    <div>
+      <h1>Context API with axios</h1>
+      <Components.Posts />
+      <Components.PostItem />
+    </div>
     // <div>
     //   <h1>Axiom Students</h1>
     //   <Components.Form addStudent={addStudent} />
     //   <Components.Students students={students} />
     // </div>
-    <GlobalState>
-      <div>
-        <h1>Axiom Students</h1>
-        <Components.Form addStudent={addStudent} />
-        <Components.Students students={students} />
-      </div>
-    </GlobalState>
+    // <GlobalState>
+    //   <div>
+    //     <h1>Axiom Students</h1>
+    //     <Components.Form addStudent={addStudent} />
+    //     <Components.Students students={students} />
+    //   </div>
+    // </GlobalState>
     // <PropsDemo message={message} />
     // <Count />
     // <div>

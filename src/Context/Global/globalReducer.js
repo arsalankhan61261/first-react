@@ -1,9 +1,8 @@
-// import { ADD_STUDENT } from '../types';
-import { ADD_POSTS } from '../types';
+import { ADD_STUDENT } from '../types';
 
 const globalReducer = (state, action) => {
     switch (action.type) {
-        case ADD_POSTS:
+        case ADD_STUDENT:
             return {
                 ...state,
                 students: [...state.students, action.payload] 

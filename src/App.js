@@ -30,10 +30,10 @@ const App = () => {
 
   return (
     <GlobalStatePosts>
-    <>
+    <div>
       <h1>Context API with axios</h1>
       <Components.Posts />
-    </>
+    </div>
     </GlobalStatePosts>
     // <div>
     //   <h1>Axiom Students</h1>

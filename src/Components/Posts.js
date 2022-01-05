@@ -25,6 +25,7 @@ export const Posts = () => {
                     posts.map((post, index) => <PostItem key={index} post={post} index={index} />)
                 }
             </ul>
+            <button>ADD MORE</button>
         </div>
     )
 }

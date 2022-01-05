@@ -1,6 +1,6 @@
 import { useReducer } from 'react';
-import globalReducer from './globalContext';
-import globalContext from './globalReducer';
+import globalReducer from './globalReducer';
+import globalContext from './globalContext';
 import { ADD_POSTS } from '../types';
 
 const GlobalStatePosts = (props) => {

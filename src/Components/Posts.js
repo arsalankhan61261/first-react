@@ -11,6 +11,10 @@ export const Posts = () => {
             title: 'Salman',
             body: 'I think Salman is also a good boy'
         },
+        {
+            title: 'Asif',
+            body: 'Asif is absoulutely great man.'
+        }
     ];
 
     return (

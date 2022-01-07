@@ -1,21 +1,14 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import PostItem from './PostItem'
+import globalContext from '../Context/Posts/globalContext';
 
 export const Posts = () => {
-    const posts = [
-        {
-            title: 'Arsalan',
-            body: 'Arsalan is a good boy'
-        },
-        {
-            title: 'Salman',
-            body: 'I think Salman is also a good boy'
-        },
-        {
-            title: 'Asif',
-            body: 'Asif is absoulutely great man.'
-        }
-    ];
+    const {page, addPosts, posts} = useContext(globalContext)
+
+    useEffect(() => {
+        addPosts(page);
+    // eslint-disable-next-line
+    }, [])
 
     return (
         <div>
@@ -25,7 +18,7 @@ export const Posts = () => {
                     posts.map((post, index) => <PostItem key={index} post={post} index={index} />)
                 }
             </ul>
-            <button>ADD MORE</button>
+            <button onClick={() => addPosts(page)}>ADD MORE</button>
         </div>
     )
 }

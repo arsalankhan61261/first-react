@@ -1,6 +1,7 @@
 import './App.css'
 // import { useState, useEffect } from 'react';
 // import {PropsDemo} from './Components'
+// import * as Components from './Components'
 import {Students, Form} from './Components'
 // import GlobalStatePosts from './Context/Posts/GlobalStatePosts';
 import GlobalState from './Context/Global/GlobalState'

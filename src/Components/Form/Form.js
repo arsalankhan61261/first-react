@@ -1,8 +1,8 @@
 import { useState, useContext } from 'react'
-// import globalContext from '../../Context/Global/globalContext'
+import globalContext from '../../Context/Global/globalContext'
 
-const Form = ({addStudent}) => {
-    // const { addStudent } = useContext(globalContext)
+const Form = () => {
+    const { addStudent } = useContext(globalContext)
 
     const [state, setState] = useState({
         username: '',
@@ -41,8 +41,8 @@ const Form = ({addStudent}) => {
                 &nbsp;
                 <input type="text" name="age" id="age" value={state.age} onChange={onchange} placeholder="Enter age here" />
             </div>
-            <button onClick={submit}>Add</button>
-            {/* <input type="submit" value="Add" /> */}
+            {/* <button onClick={submit}>Add</button> */}
+            <input type="submit" value="Add" />
         </form>
     )
 }

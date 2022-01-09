@@ -1,9 +1,9 @@
 import './App.css'
-import { useState, useEffect } from 'react';
+// import { useState, useEffect } from 'react';
 // import {PropsDemo} from './Components'
 import * as Components from './Components'
-import GlobalStatePosts from './Context/Posts/GlobalStatePosts';
-// import GlobalState from './Context/Global/GlobalState';
+// import GlobalStatePosts from './Context/Posts/GlobalStatePosts';
+import GlobalState from './Context/Global/GlobalState';
 // import GlobalState from './Context/Global/GlobalState';
 // import Students from './Components/students/Students';
 
@@ -12,9 +12,9 @@ const App = () => {
   // const [value, setValue] = useState('')
   // const [obj, setObj] = useState({})
   // const [message, setMessage] = useState('Hello i send message to you.')
-  const [students, setStudents] = useState([])
+  // const [students, setStudents] = useState([])
 
-  const addStudent = (newStudent)  => setStudents([...students, newStudent])
+  // const addStudent = (newStudent)  => setStudents([...students, newStudent])
 
   // const addKeyValue = () => {
   //   if (obj[key] = value) {
@@ -29,24 +29,24 @@ const App = () => {
   // }
 
   return (
-    <GlobalStatePosts>
-    <div>
-      <h1>Context API with axios</h1>
-      <Components.Posts />
-    </div>
-    </GlobalStatePosts>
+    // <GlobalStatePosts>
+    // <div>
+    //   <h1>Context API with axios</h1>
+    //   <Components.Posts />
+    // </div>
+    // </GlobalStatePosts>
     // <div>
     //   <h1>Axiom Students</h1>
     //   <Components.Form addStudent={addStudent} />
     //   <Components.Students students={students} />
     // </div>
-    // <GlobalState>
-    //   <div>
-    //     <h1>Axiom Students</h1>
-    //     <Components.Form addStudent={addStudent} />
-    //     <Components.Students students={students} />
-    //   </div>
-    // </GlobalState>
+    <GlobalState>
+      <div>
+        <h1>Axiom Students</h1>
+        <Components.Form />
+        <Components.Students students={students} />
+      </div>
+     </GlobalState>
     // <PropsDemo message={message} />
     // <Count />
     // <div>

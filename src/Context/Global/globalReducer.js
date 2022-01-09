@@ -5,7 +5,7 @@ const globalReducer = (state, action) => {
         case ADD_STUDENT:
             return {
                 ...state,
-                students: [...state.students, action.payload] 
+                students: [...state.students, action.payload]
             }
         default:
             return {

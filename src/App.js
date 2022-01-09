@@ -1,9 +1,9 @@
 import './App.css'
 // import { useState, useEffect } from 'react';
 // import {PropsDemo} from './Components'
-import * as Components from './Components'
+import {Students, Form} from './Components'
 // import GlobalStatePosts from './Context/Posts/GlobalStatePosts';
-import GlobalState from './Context/Global/GlobalState';
+import GlobalState from './Context/Global/GlobalState'
 // import GlobalState from './Context/Global/GlobalState';
 // import Students from './Components/students/Students';
 
@@ -40,11 +40,14 @@ const App = () => {
     //   <Components.Form addStudent={addStudent} />
     //   <Components.Students students={students} />
     // </div>
+    // <GlobalState>
+    //   <h1>ABC</h1>
+    // </GlobalState>
     <GlobalState>
       <div>
         <h1>Axiom Students</h1>
-        <Components.Form />
-        <Components.Students students={students} />
+        <Form />
+        <Students />
       </div>
      </GlobalState>
     // <PropsDemo message={message} />

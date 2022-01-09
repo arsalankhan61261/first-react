@@ -23,7 +23,7 @@ const GlobalState = (props) => {
            addStudent: addStudent
         }}
     >
-        {props.childern}
+        {props.children}
     </globalContext.Provider>
 }
 

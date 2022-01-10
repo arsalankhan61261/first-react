@@ -2,9 +2,9 @@ import './App.css'
 // import { useState, useEffect } from 'react';
 // import {PropsDemo} from './Components'
 // import * as Components from './Components'
-import {Students, Form} from './Components'
-// import GlobalStatePosts from './Context/Posts/GlobalStatePosts';
-import GlobalState from './Context/Global/GlobalState'
+import {Students, Form, Posts} from './Components'
+import GlobalStatePosts from './Context/Posts/GlobalStatePosts';
+// import GlobalState from './Context/Global/GlobalState'
 // import GlobalState from './Context/Global/GlobalState';
 // import Students from './Components/students/Students';
 
@@ -30,27 +30,24 @@ const App = () => {
   // }
 
   return (
-    // <GlobalStatePosts>
-    // <div>
-    //   <h1>Context API with axios</h1>
-    //   <Components.Posts />
-    // </div>
-    // </GlobalStatePosts>
+    <GlobalStatePosts>
+    <div>
+      <h1>Context API with axios</h1>
+      <Posts />
+    </div>
+    </GlobalStatePosts>
     // <div>
     //   <h1>Axiom Students</h1>
     //   <Components.Form addStudent={addStudent} />
     //   <Components.Students students={students} />
     // </div>
     // <GlobalState>
-    //   <h1>ABC</h1>
-    // </GlobalState>
-    <GlobalState>
-      <div>
-        <h1>Axiom Students</h1>
-        <Form />
-        <Students />
-      </div>
-     </GlobalState>
+    //   <div>
+    //     <h1>Axiom Students</h1>
+    //     <Form />
+    //     <Students />
+    //   </div>
+    //  </GlobalState>
     // <PropsDemo message={message} />
     // <Count />
     // <div>

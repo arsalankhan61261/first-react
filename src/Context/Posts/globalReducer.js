@@ -6,7 +6,7 @@ const globalReducer = (state, action) => {
             return {
                 ...state,
                 posts: [...state.posts, ...action.payload.data],
-                page: action.payload.page + 1
+                page: action.payload.page + 1,
             }
         default:
             return state;

@@ -15,7 +15,7 @@ const GlobalStatePosts = (props) => {
     // Function to fetch next 5 posts
     const addPosts = async (page) => {
         try {
-            const res = await axios(`https://jsonplaceholder.typicode.com/posts?_limit=5&_page=${page}`)
+            const res = await axios(`https://jsonplaceholder.typicode.com/posts?_limit=5&_page=${page}`);
             const data = await res.data
             // console.log(data);
             dispatch({type: ADD_POSTS, payload: {
@@ -30,6 +30,7 @@ const GlobalStatePosts = (props) => {
     return <globalContext.Provider
             value={{
                 posts: state.posts,
+                page: state.page,
                 addPosts: addPosts
             }}
     >

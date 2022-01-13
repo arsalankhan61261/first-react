@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from 'react'
 import PostItem from './PostItem'
 import globalContext from '../Context/Posts/globalContext';
 
-export const Posts = () => {
+const Posts = () => {
     const {page, addPosts, posts} = useContext(globalContext)
 
     useEffect(() => {

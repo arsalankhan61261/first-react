@@ -13,6 +13,7 @@ const App = () => {
   // const [obj, setObj] = useState({})
   // const [message, setMessage] = useState('Hello i send message to you.')
   // const [students, setStudents] = useState([])
+  const [todoTask, setTodoTask] = useState('')
 
   // const addStudent = (newStudent)  => setStudents([...students, newStudent])
 

@@ -34,7 +34,7 @@ const Count = () => {
 
             <div>
                 {Object.entries(obj)?.map((v, i) => {
-                    console.log(Object.entries(obj))
+                    // console.log(Object.entries(obj))
                     return <p key={i}>{`${v[0]?.charAt(0)?.toUpperCase()}${v[0]?.slice(1,)}: ${v[1]}`}</p>
                 })}
             </div>

@@ -1,9 +1,13 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
-const Count = () => {
+const Count = (props) => {
     const [name, setName] = useState('')
     const [wordCount, setWordsCount] = useState(0)
     const [obj, setObj] = useState({})
+
+    useEffect(() => {
+        console.log(props?.todoTask);
+    }, [props?.todoTask])
 
     function updateName (e) {
         let value = e?.target?.value

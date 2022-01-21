@@ -3,11 +3,15 @@ import { Form, Input, Button } from 'antd'
 
 const Login = () => {
 
+    const onFinish = (values) => {
+        console.log(values);
+    }
+
     return (
         <div>
             <Form
                 name="basic"
-                // onFinish={onFinish}
+                onFinish={onFinish}
                 // onFinishFailed={onFinishFailed}
                 >
                 <Form.Item
@@ -20,7 +24,7 @@ const Login = () => {
                     },
                     {
                         type: 'email',
-                        message: 'Please Enter Valid Email'
+                        message: 'Please Enter Valid Email!'
                     }
                     ]}
                 >
@@ -39,22 +43,7 @@ const Login = () => {
                 >
                     <Input.Password />
                 </Form.Item>
-
                 <Form.Item
-                    name="remember"
-                    valuePropName="checked"
-                    wrapperCol={{
-                    offset: 8,
-                    span: 16,
-                    }}
-                >
-                </Form.Item>
-
-                <Form.Item
-                    wrapperCol={{
-                    offset: 8,
-                    span: 16,
-                    }}
                 >
                     <Button type="primary" htmlType="submit">
                     Submit

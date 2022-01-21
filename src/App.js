@@ -16,7 +16,7 @@ const App = () => {
   const [todoTask, setTodoTask] = useState('')
 
   useEffect(() => {
-    
+    console.log(todoTask);
   }, [todoTask])
 
   // const addStudent = (newStudent)  => setStudents([...students, newStudent])
@@ -54,7 +54,7 @@ const App = () => {
     //  </GlobalState>
     // <PropsDemo message={message} />
     <div>
-    <Count />
+    <Count todoTask={todoTask} />
     <Todo setTodoTask={setTodoTask} />
     </div>
     // <div>

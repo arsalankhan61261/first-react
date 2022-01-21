@@ -11,8 +11,8 @@ const Login = () => {
                 // onFinishFailed={onFinishFailed}
                 >
                 <Form.Item
-                    label="Username"
-                    name="username"
+                    label="Email"
+                    name="email"
                     rules={[
                     {
                         required: true,

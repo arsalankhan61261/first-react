@@ -18,6 +18,10 @@ const Login = () => {
                         required: true,
                         message: 'Please input your username!',
                     },
+                    {
+                        type: 'email',
+                        message: 'Please Enter Valid Email'
+                    }
                     ]}
                 >
                     <Input />

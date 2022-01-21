@@ -1,23 +1,20 @@
 import { useEffect, useState } from 'react';
-import { Form } from 'antd'
+import { Form, Input, Button } from 'antd'
 
-const Login = (props) => {
+const Login = () => {
 
     return (
         <div>
             <Form
                 name="basic"
-                labelCol={{
-                    span: 8,
-                }}
-                wrapperCol={{
-                    span: 16,
-                }}
-                initialValues={{
-                    remember: true,
-                }}
-                onFinish={onFinish}
-                onFinishFailed={onFinishFailed}
+                // labelCol={{
+                //     span: 8,
+                // }}
+                // wrapperCol={{
+                //     span: 16,
+                // }}
+                // onFinish={onFinish}
+                // onFinishFailed={onFinishFailed}
                 autoComplete="off"
                 >
                 <Form.Item
@@ -54,7 +51,6 @@ const Login = (props) => {
                     span: 16,
                     }}
                 >
-                    <Checkbox>Remember me</Checkbox>
                 </Form.Item>
 
                 <Form.Item

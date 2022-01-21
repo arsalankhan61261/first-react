@@ -8,6 +8,7 @@ import GlobalState from '../Context/Global/GlobalState'
 import Posts from './Posts'
 import PostItem from './PostItem'
 import GlobalStatePosts from '../Context/Posts/GlobalStatePosts'
+import Login from './Login'
 
 export {
     Count,
@@ -19,5 +20,6 @@ export {
     GlobalState,
     Posts,
     PostItem,
-    GlobalStatePosts
+    GlobalStatePosts,
+    Login
 }

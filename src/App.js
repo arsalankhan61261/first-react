@@ -1,8 +1,8 @@
 import './App.css'
 import { useState, useEffect } from 'react';
 // import * as Components from './Components'
-import {Students, Form, Posts, PropsDemo, Count, Todo} from './Components'
-import GlobalStatePosts from './Context/Posts/GlobalStatePosts';
+import {Students, Form, Posts, PropsDemo, Count, Todo, Login} from './Components'
+// import GlobalStatePosts from './Context/Posts/GlobalStatePosts';
 // import GlobalState from './Context/Global/GlobalState'
 // import GlobalState from './Context/Global/GlobalState';
 // import Students from './Components/students/Students';
@@ -54,8 +54,9 @@ const App = () => {
     //  </GlobalState>
     // <PropsDemo message={message} />
     <div>
-    <Count todoTask={todoTask} />
-    <Todo setTodoTask={setTodoTask} />
+      <Login />
+    {/* <Count todoTask={todoTask} />
+    <Todo setTodoTask={setTodoTask} /> */}
     </div>
     // <div>
     // <Count />

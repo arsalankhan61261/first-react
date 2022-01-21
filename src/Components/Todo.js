@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-const Todo = () => {
+const Todo = (props) => {
     const [arr, setArr] = useState([])
     const [task, setTask] = useState('')
     const [isEdit, setEdit] = useState(false)
@@ -13,6 +13,7 @@ const Todo = () => {
         } else {
             arr?.push(task)
             setArr(arr)
+            props?.setTodoTask(task)
             // console.log(arr);
         }
         setTask('')

@@ -8,48 +8,48 @@ const Login = () => {
     }
 
     return (
-        <div>
-            <Form
-                name="basic"
-                onFinish={onFinish}
-                // onFinishFailed={onFinishFailed}
-                >
-                <Form.Item
-                    label="Email"
-                    name="email"
-                    rules={[
-                    {
-                        required: true,
-                        message: 'Please input your username!',
-                    },
-                    {
-                        type: 'email',
-                        message: 'Please Enter Valid Email!'
-                    }
-                    ]}
-                >
-                    <Input />
-                </Form.Item>
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <div style={{ width: '80%', display: 'flex', justifyContent: 'center', backgroundColor: 'gray' }}>
+                <Form
+                    name="basic"
+                    onFinish={onFinish}
+                    // onFinishFailed={onFinishFailed}
+                    >
+                    <Form.Item
+                        name="email"
+                        rules={[
+                        {
+                            required: true,
+                            message: 'Please input your username!',
+                        },
+                        {
+                            type: 'email',
+                            message: 'Please Enter Valid Email!'
+                        }
+                        ]}
+                    >
+                        <Input />
+                    </Form.Item>
 
-                <Form.Item
-                    label="Password"
-                    name="password"
-                    rules={[
-                    {
-                        required: true,
-                        message: 'Please input your password!',
-                    },
-                    ]}
-                >
-                    <Input.Password />
-                </Form.Item>
-                <Form.Item
-                >
-                    <Button type="primary" htmlType="submit">
-                    Submit
-                    </Button>
-                </Form.Item>
-            </Form>
+                    <Form.Item
+                        name="password"
+                        rules={[
+                        {
+                            required: true,
+                            message: 'Please input your password!',
+                        },
+                        ]}
+                    >
+                        <Input.Password />
+                    </Form.Item>
+                    <Form.Item
+                    >
+                        <Button type="primary" htmlType="submit">
+                        Submit
+                        </Button>
+                    </Form.Item>
+                </Form>
+            </div>
         </div>
     )
 

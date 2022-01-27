@@ -28,7 +28,7 @@ const Login = () => {
                         }
                         ]}
                     >
-                        <Input />
+                        <Input placeholder='Enter email here'/>
                     </Form.Item>
 
                     <Form.Item
@@ -40,7 +40,7 @@ const Login = () => {
                         },
                         ]}
                     >
-                        <Input.Password />
+                        <Input.Password placeholder='Enter password here' />
                     </Form.Item>
                     <Form.Item
                     >

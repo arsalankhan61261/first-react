@@ -4,7 +4,7 @@ import { Form, Input, Button } from 'antd'
 const Login = () => {
 
     const onFinish = (values) => {
-        console.log(values);
+        console.log('values', values);
     }
 
     return (

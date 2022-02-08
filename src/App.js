@@ -2,6 +2,7 @@ import './App.css'
 import { useState, useEffect } from 'react';
 // import * as Components from './Components'
 import {Students, Form, Posts, PropsDemo, Count, Todo, Login} from './Components'
+import {useSelector} from 'react-redux'
 // import GlobalStatePosts from './Context/Posts/GlobalStatePosts';
 // import GlobalState from './Context/Global/GlobalState'
 // import GlobalState from './Context/Global/GlobalState';
@@ -14,10 +15,15 @@ const App = () => {
   // const [message, setMessage] = useState('Hello i send message to you.')
   // const [students, setStudents] = useState([])
   const [todoTask, setTodoTask] = useState('')
+  const user = useSelector((state) => state?.user)
 
   useEffect(() => {
     console.log(todoTask);
   }, [todoTask])
+
+  useEffect(() => {
+    console.log(user);
+  }, [user])
 
   // const addStudent = (newStudent)  => setStudents([...students, newStudent])
 
@@ -53,10 +59,12 @@ const App = () => {
     //   </div>
     //  </GlobalState>
     // <PropsDemo message={message} />
+
     <div>
-      <Login />
-    {/* <Count todoTask={todoTask} />
-    <Todo setTodoTask={setTodoTask} /> */}
+      {user?.email ? <div>
+      <Count todoTask={todoTask} />
+      <Todo setTodoTask={setTodoTask} />
+      </div> : <Login />}
     </div>
     // <div>
     // <Count />

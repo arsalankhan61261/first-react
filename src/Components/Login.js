@@ -1,10 +1,14 @@
 import { useEffect, useState } from 'react';
 import { Form, Input, Button } from 'antd'
+import {useDispatch} from 'react-redux'
+import {loginUser} from '../Redux/Actions/authActions'
 
 const Login = () => {
+    const dispatch = useDispatch()
 
     const onFinish = (values) => {
         console.log('values', values);
+        dispatch(loginUser(values))
     }
 
     return (
@@ -31,7 +35,7 @@ const Login = () => {
                         }
                         ]}
                     >
-                        <Input placeholder='Enter email here' style={{ borderRadius: '5px' }} />
+                        <Input placeholder='Enter email here' type='email' style={{ borderRadius: '5px' }} />
                     </Form.Item>
 
                     <Form.Item

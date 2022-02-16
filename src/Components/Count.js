@@ -32,7 +32,9 @@ const Count = (props) => {
     }
     return (
         <div>
-            <button type='dashed'>Logout</button>
+            <div className='logout'>
+                <button type='dashed'>Logout</button>
+            </div>
             <h1>{name}</h1>
             <input placeholder = 'Enter your name here...' onChange={updateName}/>
             <p>Characters Count: {name?.trim()?.length}</p>

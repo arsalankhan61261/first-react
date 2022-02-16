@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import {button} from 'antd'
 
 const Count = (props) => {
     const [name, setName] = useState('')
@@ -31,6 +32,7 @@ const Count = (props) => {
     }
     return (
         <div>
+            <button type='dashed'>Logout</button>
             <h1>{name}</h1>
             <input placeholder = 'Enter your name here...' onChange={updateName}/>
             <p>Characters Count: {name?.trim()?.length}</p>

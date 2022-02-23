@@ -1,7 +1,10 @@
 import { useEffect, useState } from 'react';
 import {button} from 'antd'
+import {removeUser} from '../Redux/Actions/authActions'
+import {useDispatch} from 'react-redux'
 
 const Count = (props) => {
+    const dispatch = useDispatch()
     const [name, setName] = useState('')
     const [wordCount, setWordsCount] = useState(0)
     const [obj, setObj] = useState({})
@@ -33,7 +36,7 @@ const Count = (props) => {
     return (
         <div>
             <div className='logout'>
-                <button type='dashed'>Logout</button>
+                <button type='dashed' onClick={() => dispatch(removeUser())}>Logout</button>
             </div>
             <h1>{name}</h1>
             <input placeholder = 'Enter your name here...' onChange={updateName}/>

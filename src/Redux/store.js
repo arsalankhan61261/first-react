@@ -1,6 +1,21 @@
 import { authReducers } from './Reducers'
 import { createStore } from 'redux'
+import thunk from 'redux-thunk'
+import { persistStore, persistReducer } from 'redux-persist'
+import storage from 'redux-persist/lib/storage'
 
-const store = createStore(authReducers)
+const persistConfig = {
+    key: 'root',
+    storage,
+}
 
-export default store
+const persistedReducer = persistReducer(persistConfig, authReducers)
+
+const store = createStore(persistedReducer)
+
+const persistor = persistStore(store)
+
+export {
+    store,
+    persistor
+}

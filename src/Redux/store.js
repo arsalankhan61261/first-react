@@ -1,4 +1,4 @@
-import { authReducers } from './Reducers'
+import { authReducers, countReducer } from './Reducers'
 import { createStore } from 'redux'
 import thunk from 'redux-thunk'
 import { persistStore, persistReducer } from 'redux-persist'

@@ -9,7 +9,7 @@ const persistConfig = {
     storage,
 }
 
-const persistedReducer = persistReducer(persistConfig, authReducers)
+const persistedReducer = persistReducer(persistConfig, authReducers, countReducer)
 
 const store = createStore(persistedReducer)
 

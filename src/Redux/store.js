@@ -1,4 +1,4 @@
-import { authReducers, countReducer } from './rootReducers'
+import rootReducer from './rootReducers'
 import { createStore } from 'redux'
 import thunk from 'redux-thunk'
 import { persistStore, persistReducer } from 'redux-persist'
@@ -9,7 +9,7 @@ const persistConfig = {
     storage,
 }
 
-const persistedReducer = persistReducer(persistConfig, authReducers, countReducer)
+const persistedReducer = persistReducer(persistConfig, rootReducer)
 
 const store = createStore(persistedReducer)
 

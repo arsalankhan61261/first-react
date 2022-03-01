@@ -17,6 +17,7 @@ const App = () => {
   const [todoTask, setTodoTask] = useState('')
   // console.log('useSelector', useSelector((state) => state));
   const user = useSelector((state) => state?.user)
+  console.log('selector', useSelector((state) => state));
 
   useEffect(() => {
     console.log(todoTask);

@@ -44,13 +44,12 @@ const Login = () => {
                         {
                             required: true,
                             message: 'Please input your password!',
-                        },
+                        }
                         ]}
                     >
                         <Input.Password placeholder='Enter password here' style={{ borderRadius: '5px' }} />
                     </Form.Item>
-                    <Form.Item
-                    >
+                    <Form.Item>
                         <Button type="primary" block htmlType="submit">
                         Submit
                         </Button>

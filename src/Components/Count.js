@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
-import {button} from 'antd'
+import {Button} from 'antd'
 import {removeUser} from '../Redux/Actions/authActions'
-import {wordsLengthCount} from '../Redux/Actions/countActions'
 import {useDispatch} from 'react-redux'
 
 const Count = (props) => {

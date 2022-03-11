@@ -3,6 +3,4 @@ import { createStore } from 'redux'
 
 const store = createStore(authReducers)
 
-export {
-    store
-}
+export default store

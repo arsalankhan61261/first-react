@@ -1,5 +1,3 @@
 import authReducers from './authReducers'
 
-export {
-    authReducers
-}
+export default authReducers

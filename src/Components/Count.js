@@ -36,7 +36,7 @@ const Count = (props) => {
     return (
         <div>
             <div className='logout'>
-                <button type='dashed' onClick={() => dispatch(removeUser())}>Logout</button>
+                <Button type='dashed' onClick={() => dispatch(removeUser())}>Logout</Button>
             </div>
             <h1>{name}</h1>
             <input placeholder = 'Enter your name here...' onChange={updateName}/>

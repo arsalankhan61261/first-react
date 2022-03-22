@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import {Button} from 'antd'
 import {removeUser} from '../Redux/Actions/authActions'
+import {wordsLengthCount} from '../Redux/Actions/countActions'
 import {useDispatch} from 'react-redux'
 
 const Count = (props) => {
@@ -19,6 +20,7 @@ const Count = (props) => {
         // console.log(value);
         setWordsCount(value?.trim()?.split(' ')?.length)
         // console.log(value?.trim()?.split(' '));
+        wordsLengthCount(value?.trim()?.split(' ')?.length)
 
         let wordsArray = value?.trim()?.split(' ')
 

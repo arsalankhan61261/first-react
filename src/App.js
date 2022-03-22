@@ -24,7 +24,7 @@ const App = () => {
   }, [todoTask])
 
   useEffect(() => {
-    console.log(user);
+    console.log('user',user);
   }, [user])
 
   // const addStudent = (newStudent)  => setStudents([...students, newStudent])
